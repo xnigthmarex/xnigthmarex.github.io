@@ -25,7 +25,36 @@ export const projects = [
     image: "projects/messenger.png",
     description: "Chatting Site",
   },
- 
+  {
+    title: "Next.js Starter",
+    url: "https://github.com/xnigthmarex/Next.js-Perfect-starter",
+    image: "projects/messenger.png",
+    description: "Starter Template",
+  },
+  {
+    title: "Fun Small Projects",
+    url: "https://github.com/xnigthmarex/Fun-BashScripts",
+    image: "projects/messenger.png",
+    description: "The name is Self explanatory",
+  },
+  {
+    title: "Kjaas",
+    url: "https://github.com/xnigthmarex/kjaas",
+    image: "projects/messenger.png",
+    description: "E-commerce site",
+  },
+  {
+    title: "AutomationScripts",
+    url: "https://github.com/xnigthmarex/BashAutomationScripts",
+    image: "projects/messenger.png",
+    description: "These Scripts make it easy to download docker and deploying containers",
+  },
+  {
+    title: "Coding p/s",
+    url: "https://github.com/xnigthmarex/CodingBats-Answers",
+    image: "projects/messenger.png",
+    description: "This repo contains almost all of the solutions to questions on the codingbat.com website.",
+  },
 ];
 
 const Project = (props) => {
@@ -49,7 +78,7 @@ const Project = (props) => {
         onClick={() => window.open(project.url, "_blank")}
         ref={background}
       >
-        <planeGeometry args={[2.2, 2]} />
+        <planeGeometry args={[2.3, 2.1]} />
         <meshBasicMaterial color="black" transparent opacity={0.4} />
       </mesh>
       <Image
@@ -59,7 +88,7 @@ const Project = (props) => {
         position-y={0.3}
       />
       <Text
-        maxWidth={2}
+        maxWidth={2.6}
         anchorX={"left"}
         anchorY={"top"}
         fontSize={0.2}
@@ -71,7 +100,7 @@ const Project = (props) => {
         maxWidth={2}
         anchorX="left"
         anchorY="top"
-        fontSize={0.1}
+        fontSize={0.13}
         position={[-1, -0.6, 0]}
       >
         {project.description}
@@ -80,7 +109,7 @@ const Project = (props) => {
   );
 };
 
-export const currentProjectAtom = atom(Math.floor(projects.length / 2));
+export const currentProjectAtom = atom(Math.floor(projects.length / 3));
 
 export const Projects = () => {
   const { viewport } = useThree();
