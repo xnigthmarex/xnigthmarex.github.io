@@ -52,8 +52,8 @@ export const Experience = (props) => {
   useFrame((state) => {
     let curSection = Math.floor(data.scroll.current * data.pages);
 
-    if (curSection > 3) {
-      curSection = 3;
+    if (curSection > 2) {
+      curSection = 2;
     }
 
     if (curSection !== section) {
@@ -63,20 +63,12 @@ export const Experience = (props) => {
     state.camera.position.x = cameraPositionX.get();
     state.camera.lookAt(cameraLookAtX.get(), 0, 0);
 
-    // const position = new THREE.Vector3();
     if (section === 0) {
       characterContainerAboutRef.current.getWorldPosition(
         characterGroup.current.position
       );
     }
-    // console.log([position.x, position.y, position.z]);
-
-    // const quaternion = new THREE.Quaternion();
-    // characterContainerAboutRef.current.getWorldQuaternion(quaternion);
-    // const euler = new THREE.Euler();
-    // euler.setFromQuaternion(quaternion, "XYZ");
-
-    // console.log([euler.x, euler.y, euler.z]);
+    
   });
 
   return (
