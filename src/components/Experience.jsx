@@ -118,17 +118,7 @@ export const Experience = (props) => {
             scaleY: 1,
             scaleZ: 1,
           },
-          3: {
-            y: -viewport.height * 3 + 1,
-            x: 0.24,
-            z: 8.5,
-            rotateX: 0,
-            rotateY: -Math.PI / 4,
-            rotateZ: 0,
-            scaleX: 1,
-            scaleY: 1,
-            scaleZ: 1,
-          },
+          
         }}
       >
         <Avatar animation={characterAnimation} wireframe={section === 1} />
@@ -158,7 +148,6 @@ export const Experience = (props) => {
         ></group>
       </motion.group>
 
-      {/* SKILLS */}
       <motion.group
         position={[
           0,
